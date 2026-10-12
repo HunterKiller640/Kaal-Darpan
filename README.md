@@ -1,55 +1,16 @@
-# Kaal Darpan — museum development stage
+# React + Vite
 
-This extends your original React home page with a bright modern Three.js gallery inspired by your reference image, three selectable monument miniatures, a teleport transition, orbit/zoom exploration, architecture hotspots, short timelines, two-question activities and local learning progress.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-![Gallery preview](Gallery_Preview.png)
+Currently, two official plugins are available:
 
-## Open it
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Extract the ZIP and open the extracted project folder containing package.json in VS Code. In its terminal run:
+## React Compiler
 
-    npm install
-    npm run dev
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Open http://localhost:5175. Keep the terminal running. If port 5175 is already occupied by your old project, stop the old server with Ctrl+C first.
+## Expanding the Oxlint configuration
 
-The downloaded ZIP intentionally excludes node_modules. npm install recreates it correctly for your computer.
-
-## Gallery design
-
-The gallery uses white rectangular display tables, a tiled stone-style floor, full-height windows, a dark slatted ceiling with perimeter lighting, wall-mounted heritage illustrations, benches and small object exhibits. Taj Mahal is on the central foreground table, Qutub Minar is further along the centre aisle, and Red Fort is on the left display table. The gallery is modeled in 3D; the reference photo is not used as a flat background.
-
-Drag to look around within the room and scroll/pinch to move closer. Select a miniature, its display table, or the accessible monument card to enter that monument.
-
-## Try it
-
-Begin Exploration → select Taj Mahal, Qutub Minar or Red Fort → drag to rotate and scroll/pinch to zoom → select a numbered marker or a feature in the right panel → History → Challenge → answer both questions and check answers → return to Museum → My Journey.
-
-The exhibit cards and feature buttons provide keyboard access to the same content as 3D clicking. Reset View restores the camera. R also resets it when the canvas is focused.
-
-## Scope
-
-Models are simplified procedural learning placeholders, not measured reconstructions. This stage supports looking around the museum and orbiting monuments; walking through interiors, production Blender/GLB models, QR scanning, accounts, Firebase and AR/prism display are not implemented. Progress is stored in localStorage for the same browser and origin; it does not sync between devices. If storage is blocked the app remains usable for the session.
-
-## Files
-
-- src/App.jsx: entrance, navigation, transition, learning panels, quiz, progress
-- src/Scene.jsx: renderer, controls, picking, projected markers, cleanup
-- src/models.js: procedural monument and museum builders
-- src/data.js: monument content, hotspots, quiz and source URLs
-- src/App.css and src/index.css: styling
-
-## References
-
-Historical content was checked against UNESCO monument descriptions. Simplified model observations are explicitly marked. Content should be reviewed alongside measured assets before a full educational release.
-
-- Taj Mahal: https://whc.unesco.org/en/list/252/
-- Qutb Minar and its Monuments: https://whc.unesco.org/en/list/233/
-- Red Fort Complex: https://whc.unesco.org/en/list/231/
-
-## Build
-
-    npm run build
-    npm run lint
-
-Node.js: use a version supported by the project's Vite dependency. No API keys or database setup are needed for this development stage.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
